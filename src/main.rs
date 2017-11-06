@@ -4,8 +4,9 @@ use std::fs;
 use std::process::Command;
 use std::path::PathBuf;
 
-fn create_soft_link() -> io::Result<()> {
-    let config_dir: PathBuf = "config".into();
+fn create_soft_links() -> io::Result<()> {
+    let mut config_dir: PathBuf = env::current_dir().unwrap();
+    config_dir.push("config");
 
     let mut config_files = vec![];
 
@@ -16,7 +17,7 @@ fn create_soft_link() -> io::Result<()> {
         config_files.push(name.to_os_string());
     }
 
-    println!("found {:?}", config_files);
+    println!("found {:?}\n", config_files);
 
     let dst: PathBuf = env::home_dir().unwrap();
     for config in config_files {
@@ -28,21 +29,29 @@ fn create_soft_link() -> io::Result<()> {
             fs::remove_file(&dst)?;
         }
 
-        let mut src = env::current_dir().unwrap();
-        src.push(&config_dir);
+        let mut src = config_dir.clone();
         src.push(&config);
-        let mut cmd = Command::new("ln");
-        cmd.arg("-s").arg(&src).arg(&dst);
-        println!("execute {:?}", cmd);
 
-        let output = cmd.output().unwrap();
-        println!("{:?}", output);
+        let output = Command::new("ln")
+            .arg("-s")
+            .arg(&src)
+            .arg(&dst)
+            .output()
+            .unwrap();
+        let st = output.status;
+        if st.success() {
+            println!("create {:?} success", dst);
+        } else {
+            println!("create {:?} failed, code: {:?}", dst, st.code());
+        }
+
+        println!();
     }
 
     Ok(())
 }
 
 fn main() {
-    let r = create_soft_link();
+    let r = create_soft_links();
     println!("{:?}", r);
 }
