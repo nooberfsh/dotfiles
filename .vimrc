@@ -13,10 +13,12 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-syntastic/syntastic'
+Plug 'cespare/vim-toml'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'scrooloose/nerdcommenter'
 Plug 'rdnetto/YCM-Generator'
 
 call plug#end()
-
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
