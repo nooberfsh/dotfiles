@@ -52,6 +52,9 @@ imap <C-v> <ESC>"+pa
 
 set ignorecase
 set smartcase 
+set hlsearch
+set incsearch
+nnoremap <Esc><Esc> :nohlsearch<CR>
 
 inoremap <c-s> <Esc>:update<CR>
 nnoremap <c-s> <Esc>:update<CR>
