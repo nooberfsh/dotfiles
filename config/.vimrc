@@ -17,6 +17,7 @@ Plug 'cespare/vim-toml'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'scrooloose/nerdcommenter'
 Plug 'rdnetto/YCM-Generator'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
