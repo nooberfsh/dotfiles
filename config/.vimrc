@@ -25,9 +25,6 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 "common
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-let mapleader = ','
-let g:mapleader = ','
-
 set nu
 syntax enable
 
@@ -80,7 +77,6 @@ let NERDTreeIgnore = ['\.bk$']
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 "ycm
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ycm_rust_src_path = '~/.multirust/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/'
 let g:ycm_confirm_extra_conf = 0
 
 nmap <leader>gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
