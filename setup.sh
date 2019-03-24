@@ -7,36 +7,31 @@ SCRIPT=$(readlink -f "$0")
 ROOT=$(dirname "$SCRIPT")
 echo "root dir: $ROOT"
 
+# $1: 文件名，不带path
+# $2: symlink创建的目录，默认为$HOME
+create_symlink(){
+    p="$HOME/$1"
+    if [ ! -z "$2" ]; then
+	p="$2/$1"
+	mkdir -p $2
+    fi
+    if [ -f $p ]; then
+   	echo "$p exists, skip"
+    else
+       echo "$p does not exist, create symlink..."
+       ln -s "$ROOT/config/$1" $p
+    fi
+}
 
-gitconfig="$HOME/.gitconfig"
-if [ -f $gitconfig ]; then
-   echo "$gitconfig exists, skip"
-else
-   echo "$gitconfig does not exist, create symlink..."
-   ln -s "$ROOT/config/.gitconfig" $gitconfig
-fi
+gitconfig=".gitconfig"
+create_symlink $gitconfig 
 
-neovim="$HOME/.config/nvim/init.vim"
-if [ -f $neovim ]; then
-   echo "$neovim exists, skip"
-else
-   echo "$neovim does not exist, create symlink..."
-   mkdir -p $(dirname "$neovim")
-   ln -s "$ROOT/config/init.vim" $neovim
-fi
+neovim="init.vim"
+neovim_dir="$HOME/.config/nvim"
+create_symlink $neovim $neovim_dir
 
-tmux="$HOME/.tmux.conf"
-if [ -f $tmux ]; then
-   echo "$tmux exists, skip"
-else
-   echo "$tmux does not exist, create symlink..."
-   ln -s "$ROOT/config/.tmux.conf" $tmux
-fi
+tmux=".tmux.conf"
+create_symlink $tmux 
 
-ideavimrc="$HOME/.ideavimrc"
-if [ -f $ideavimrc ]; then
-   echo "$ideavimrc exists, skip"
-else
-   echo "$ideavimrc does not exist, create symlink..."
-   ln -s "$ROOT/config/.ideavimrc" $ideavimrc
-fi
+ideavimrc=".ideavimrc"
+create_symlink $ideavimrc
