@@ -1,10 +1,9 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 set -e
 
 # get absolute dir of the root
-SCRIPT=$(readlink -f "$0")
-ROOT=$(dirname "$SCRIPT")
+ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 echo "root dir: $ROOT"
 
 # $1: 文件名，不带path
