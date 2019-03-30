@@ -37,3 +37,6 @@ create_symlink $ideavimrc
 
 profile=".profile"
 create_symlink $profile
+
+xprofile=".xprofile"
+create_symlink $xprofile
