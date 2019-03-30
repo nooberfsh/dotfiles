@@ -40,3 +40,6 @@ create_symlink $profile
 
 xprofile=".xprofile"
 create_symlink $xprofile
+
+zshrc=".zshrc"
+create_symlink $zshrc
