@@ -99,3 +99,4 @@ source /etc/profile.d/autojump.zsh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias sbt="sbt -Dsbt.override.build.repos=true"

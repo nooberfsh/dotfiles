@@ -43,3 +43,7 @@ create_symlink $xprofile
 
 zshrc=".zshrc"
 create_symlink $zshrc
+
+sbtrepo="repositories"
+sbtdir="$HOME/.sbt"
+create_symlink $sbtrepo $sbtdir
