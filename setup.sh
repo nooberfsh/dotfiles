@@ -35,3 +35,6 @@ create_symlink $tmux
 
 ideavimrc=".ideavimrc"
 create_symlink $ideavimrc
+
+profile=".profile"
+create_symlink $profile
