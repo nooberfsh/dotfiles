@@ -27,9 +27,21 @@ nnoremap <F1> :action ActivateTerminalToolWindow<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                 Find
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" find string
 nnoremap <leader>fs :action Find<cr>
+" global find string
+nnoremap <leader>fgs :action FindInPath<cr>
+" find and replace
+nnoremap <leader>fr :action Replace<cr>
+" global find and replace
+nnoremap <leader>fgr :action ReplaceInPath<cr>
+
 nnoremap <leader>ff :action GotoFile<cr>
 nnoremap <leader>fc :action GotoClass<cr>
+nnoremap <leader>fa :action GotoAction<cr>
+" tag
+nnoremap <leader>ft :action GotoSymbol<cr>
+
 nnoremap <leader>fm :action ShowBookmarks<cr>
 nnoremap <leader>fb :action ViewBreakpoints<cr>
 
@@ -95,6 +107,12 @@ nnoremap <leader>ds :action Stop<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " p: pretty
 nnoremap <leader>pp :action ReformatCode<cr>
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                 git
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
