@@ -13,9 +13,6 @@ nnoremap <leader>qi :action QuickImplementations<CR>
 
 
 
-nnoremap <leader>gs :action ShowSettings<CR>
-
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                 terminal
@@ -113,6 +110,12 @@ nnoremap <leader>pp :action ReformatCode<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                 git
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" git commit
+nnoremap <leader>gc :action CheckinFiles<cr>
+" git commit current file
+nnoremap <leader>gf :action CheckinProject<cr>
+
+
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
