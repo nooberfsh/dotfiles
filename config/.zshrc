@@ -100,4 +100,3 @@ source /etc/profile.d/autojump.zsh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias sbt="sbt -Dsbt.override.build.repos=true"
-alias pmu="yaourt -Syu --aur"
