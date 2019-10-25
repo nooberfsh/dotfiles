@@ -121,6 +121,8 @@ nnoremap <leader>pp :action ReformatCode<cr>
 nnoremap <leader>gc :action CheckinProject<cr>
 " git commit current file
 nnoremap <leader>gf :action CheckinFiles<cr>
+" git blame
+nnoremap <leader>gb :action Annotate<cr>
 
 
 
