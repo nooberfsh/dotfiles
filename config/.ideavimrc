@@ -22,13 +22,6 @@ nnoremap <leader>rf :action RenameFile<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                 terminal
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <F1> :action ActivateTerminalToolWindow<cr>
-
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                 Find
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " find string
@@ -61,13 +54,6 @@ nnoremap <leader>fo :action FileStructurePopup<cr>
 nnoremap <A-m> :action ToggleBookmark<cr>
 nnoremap <leader>mn :action GotoNextBookmark<cr>
 nnoremap <leader>mp :action GotoPreviousBookmark<cr>
-
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                 Breakpoint
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <A-b> :action ToggleLineBreakpoint<cr>
 
 
 
@@ -124,6 +110,16 @@ nnoremap <leader>gf :action CheckinFiles<cr>
 " git blame
 nnoremap <leader>gb :action Annotate<cr>
 
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                 misc
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" open settings
+nnoremap <A-s> :action ShowSettings<cr>
+" break point
+nnoremap <A-b> :action ToggleLineBreakpoint<cr>
 
 
 
