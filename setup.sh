@@ -22,12 +22,21 @@ create_symlink(){
     fi
 }
 
-gitconfig=".gitconfig"
-create_symlink $gitconfig 
+
+vimplug="$HOME/.local/share/nvim/site/autoload/plug.vim"
+if [ -f "$vimplug" ]; then
+    echo "$vimplug exist, skip"
+else
+    echo "$vimplug does not exist, begin to download..."
+    curl -fLo $vimplug --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+fi
 
 neovim="init.vim"
 neovim_dir="$HOME/.config/nvim"
 create_symlink $neovim $neovim_dir
+
+gitconfig=".gitconfig"
+create_symlink $gitconfig 
 
 tmux=".tmux.conf"
 create_symlink $tmux 
