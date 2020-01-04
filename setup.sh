@@ -54,6 +54,9 @@ create_symlink $profile
 xprofile=".xprofile"
 create_symlink $xprofile
 
+pam_env=".pam_environment"
+create_symlink $pam_env
+
 zshrc=".zshrc"
 create_symlink $zshrc
 
