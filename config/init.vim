@@ -3,14 +3,10 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.local/share/nvim/plugged')
 
-"lint
-Plug 'w0rp/ale'
-
 Plug 'Yggdroot/LeaderF'
 Plug 'Yggdroot/LeaderF-marks'
 Plug 'kshenoy/vim-signature'
 Plug 'mhinz/vim-grepper'
-Plug 'romainl/vim-qf'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
@@ -164,19 +160,6 @@ inoremap <F1> :Ttoggle<CR>
 tnoremap <F1> <Esc>:Ttoggle<CR>
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                   quickfix
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-au FileType qf call AdjustWindowHeight(8, 16)
-function! AdjustWindowHeight(minheight, maxheight)
-  exe max([min([line("$"), a:maxheight]), a:minheight]) . "wincmd _"
-endfunction
-
-nmap <F3> <Plug>(qf_qf_toggle)
-nmap <Leader><F3> <Plug>(qf_loc_toggle)
-noremap <Leader>n :cnext<CR>
-noremap <Leader>p :cprevious<CR>
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                   leaderf
@@ -211,14 +194,6 @@ nnoremap <Leader>8 :Grepper -tool rg -open -switch -buffer -cword -noprompt<CR>
 nnoremap <Leader>ss :Grepper -tool rg -open -switch -query 
 nnoremap <Leader>sb :Grepper -tool rg -open -switch -buffer -query 
 
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                   ale
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" let g:ale_linters = {'rust': ['rls']}
-let b:ale_fixers  = {'rust': ['rustfmt']}
-" Set this variable to 1 to fix files when you save them.
-let g:ale_fix_on_save = 1
 
 
 
