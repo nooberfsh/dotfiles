@@ -35,6 +35,8 @@ else
     curl -fLo $vimplug --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
+#####################################################
+
 neovim="init.vim"
 neovim_dir="$HOME/.config/nvim"
 create_symlink $neovim $neovim_dir
@@ -46,6 +48,14 @@ create_symlink $tmux $tmux_dir
 ideavimrc="ideavimrc"
 ideavim_dir="$HOME/.config/ideavim"
 create_symlink $ideavimrc $ideavim_dir
+
+
+gitconfig="config"
+git_dir="$HOME/.config/git"
+create_symlink $gitconfig $git_dir
+
+
+#####################################################
 
 profile=".profile"
 create_symlink $profile
@@ -62,6 +72,3 @@ create_symlink $zshrc
 sbtrepo="repositories"
 sbtdir="$HOME/.sbt"
 create_symlink $sbtrepo $sbtdir
-
-gitconfig=".gitconfig"
-create_symlink $gitconfig 
