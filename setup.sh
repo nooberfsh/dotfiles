@@ -42,8 +42,9 @@ create_symlink $neovim $neovim_dir
 gitconfig=".gitconfig"
 create_symlink $gitconfig 
 
-tmux=".tmux.conf"
-create_symlink $tmux 
+tmux="tmux.conf"
+tmux_dir="$HOME/.config/tmux"
+create_symlink $tmux $tmux_dir
 
 ideavimrc=".ideavimrc"
 create_symlink $ideavimrc
