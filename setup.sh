@@ -39,15 +39,13 @@ neovim="init.vim"
 neovim_dir="$HOME/.config/nvim"
 create_symlink $neovim $neovim_dir
 
-gitconfig=".gitconfig"
-create_symlink $gitconfig 
-
 tmux="tmux.conf"
 tmux_dir="$HOME/.config/tmux"
 create_symlink $tmux $tmux_dir
 
-ideavimrc=".ideavimrc"
-create_symlink $ideavimrc
+ideavimrc="ideavimrc"
+ideavim_dir="$HOME/.config/ideavim"
+create_symlink $ideavimrc $ideavim_dir
 
 profile=".profile"
 create_symlink $profile
@@ -64,3 +62,6 @@ create_symlink $zshrc
 sbtrepo="repositories"
 sbtdir="$HOME/.sbt"
 create_symlink $sbtrepo $sbtdir
+
+gitconfig=".gitconfig"
+create_symlink $gitconfig 
