@@ -1,0 +1,137 @@
+"actionlist: https://github.com/nooberfsh/note/blob/master/clion/IdeaVim.md
+
+let mapleader = ";"
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                 Goto
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>gd :action GotoDeclaration<CR>
+nnoremap <leader>gi :action GotoImplementation<CR>
+nnoremap <leader>gr :action FindUsages<cr>
+nnoremap <leader>qi :action QuickImplementations<CR>
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                 Refactor
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>rn :action RenameElement<CR>
+nnoremap <leader>rf :action RenameFile<CR>
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                 Find
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" find string
+nnoremap <leader>fs :action Find<cr>
+" global find string
+nnoremap <leader>fgs :action FindInPath<cr>
+" find and replace
+nnoremap <leader>fr :action Replace<cr>
+" global find and replace
+nnoremap <leader>fgr :action ReplaceInPath<cr>
+
+nnoremap <leader>ff :action GotoFile<cr>
+nnoremap <leader>fc :action GotoClass<cr>
+nnoremap <leader>fa :action GotoAction<cr>
+" tag
+nnoremap <leader>ft :action GotoSymbol<cr>
+
+nnoremap <leader>fm :action ShowBookmarks<cr>
+nnoremap <leader>fb :action ViewBreakpoints<cr>
+
+nnoremap <leader>fu :action RecentFiles<cr>
+nnoremap <leader>fo :action FileStructurePopup<cr>
+
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                 Bookmark
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <A-m> :action ToggleBookmark<cr>
+nnoremap <leader>mn :action GotoNextBookmark<cr>
+nnoremap <leader>mp :action GotoPreviousBookmark<cr>
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                 Vimrc
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>e :e ~/.ideavimrc<cr>
+nnoremap <leader>sc :source ~/.ideavimrc<cr>
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                 Window
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+inoremap <C-h> <C-\><C-N><C-w>h
+inoremap <C-j> <C-\><C-N><C-w>j
+inoremap <C-k> <C-\><C-N><C-w>k
+inoremap <C-l> <C-\><C-N><C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                 Run && Debug
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>rr :action Run<cr>
+nnoremap <leader>rc :action ChooseRunConfiguration<cr>
+nnoremap <leader>re :action editRunConfigurations<cr>
+" run single unit test
+nnoremap <leader>rt :action RunClass<cr>
+
+nnoremap <leader>dd :action Debug<cr>
+nnoremap <leader>dc :action ChooseDebugConfiguration<cr>
+nnoremap <leader>ds :action Stop<cr>
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                 Format
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" p: pretty
+nnoremap <leader>pp :action ReformatCode<cr>
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                 git
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" git commit
+nnoremap <leader>gc :action CheckinProject<cr>
+" git commit current file
+nnoremap <leader>gf :action CheckinFiles<cr>
+" git blame
+nnoremap <leader>gb :action Annotate<cr>
+
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                 misc
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" open settings
+nnoremap <A-s> :action ShowSettings<cr>
+" break point
+nnoremap <A-b> :action ToggleLineBreakpoint<cr>
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                 Basic
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set scrolloff=8
+
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <ESC>"+pa
+
+nnoremap <C-o> :action Back<cr>
+nnoremap <C-i> :action Forward<cr>
