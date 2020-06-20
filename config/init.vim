@@ -3,6 +3,8 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 Plug 'Yggdroot/LeaderF'
 Plug 'Yggdroot/LeaderF-marks'
 Plug 'kshenoy/vim-signature'
