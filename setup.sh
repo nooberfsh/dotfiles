@@ -23,18 +23,6 @@ create_symlink(){
 }
 
 
-# install neovim and neovimplugins (:CheckHealth)
-sudo pacman -S neovim python-pynvim xclip
-
-# install vimplug
-vimplug="$HOME/.local/share/nvim/site/autoload/plug.vim"
-if [ -f "$vimplug" ]; then
-    echo "$vimplug exist, skip"
-else
-    echo "$vimplug does not exist, begin to download..."
-    curl -fLo $vimplug --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-fi
-
 #####################################################
 
 neovim="init.vim"
