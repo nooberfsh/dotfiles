@@ -60,8 +60,8 @@ nnoremap <leader>mp :action GotoPreviousBookmark<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                 Vimrc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>e :e ~/.ideavimrc<cr>
-nnoremap <leader>sc :source ~/.ideavimrc<cr>
+nnoremap <leader>e :e ~/.config/ideavim/ideavimrc<cr>
+nnoremap <leader>sc :source ~/.config/ideavim/ideavimrc<cr>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
