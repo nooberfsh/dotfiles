@@ -16,7 +16,7 @@ set -x PATH "$HDX/apps/go/bin:$HDX/apps/cargo/bin:$HDX/bin:$PATH"
 #################################################################################################### 
 # normal alias
 
-alias ee="nvim $HOME/.config/fish/config.fish"
+alias ee="nvim $HOME/.config/fish/config.fish && source $HOME/.config/fish/config.fish"
 alias pts="phoronix-test-suite"
 
 
@@ -24,8 +24,15 @@ alias pts="phoronix-test-suite"
 # git alias
 
 alias glg="git lg"
+alias glg1="git lg1"
+alias glg2="git lg2"
+alias glg3="git lg3"
 alias gst="git status"
 alias gco="git checkout"
 alias grb="git rebase"
+alias grbm="git rebase master"
+alias gcm="git commit -m"
+alias gcam="git commit -a -m"
+alias gpf="git push --force-with-lease"
 # https://stackoverflow.com/questions/3216360/merge-update-and-pull-git-branches-without-using-checkouts
-alias gsync="git checkout --quiet --detach && git fetch origin master:master && git checkout --quiet -"
+alias gsync="git checkout --detach && git fetch origin master:master && git checkout -"
