@@ -4,12 +4,13 @@ set -x HDX "$HOME/hdx"
 set -x CARGO_HOME "$HDX/apps/cargo"
 set -x RUSTUP_HOME "$HDX/apps/rustup"
 set -x GOPATH "$HDX/apps/go"
+set -x SNAP_HOME "/var/lib/snapd"
 
 # system default editor
 set -x VISUAL "nvim"
 set -x EDITOR "$VISUAL"
 # path
-set -x PATH "$HDX/apps/go/bin:$HDX/apps/cargo/bin:$HDX/bin:$PATH"
+set -x PATH "$SNAP_HOME/snap/bin:$HDX/apps/go/bin:$HDX/apps/cargo/bin:$HDX/bin:$PATH"
 
 
 
