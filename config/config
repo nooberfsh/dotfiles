@@ -21,3 +21,5 @@
 [core]
 	autocrlf = input
 	editor = nvim
+[rebase]
+	autosquash = true
