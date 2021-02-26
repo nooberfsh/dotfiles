@@ -19,6 +19,9 @@ set -x PATH "$SNAP_HOME/snap/bin:$HDX/apps/go/bin:$HDX/apps/cargo/bin:$HDX/bin:$
 
 alias ee="nvim $HOME/.config/fish/config.fish && source $HOME/.config/fish/config.fish"
 alias pts="phoronix-test-suite"
+alias pts_l="pts list-available-tests"
+alias pts_ll="pts list-available-suites"
+alias pts_b="pts benchmark"
 
 
 #################################################################################################### 
