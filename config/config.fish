@@ -15,7 +15,7 @@ set -x VISUAL "nvim"
 set -x EDITOR "$VISUAL"
 
 # path
-set -x PATH "$SNAP_HOME/snap/bin:$HDX/apps/go/bin:$HDX/apps/cargo/bin:$HDX/bin:$PATH"
+set -x PATH "$SNAP_HOME/snap/bin:$HDX/apps/go/bin:$HDX/apps/cargo/bin:$HDX/bin:$PATH:$HOME/.local/share/gem/ruby/2.7.0/bin"
 
 
 #################################################################################################### 
