@@ -6,18 +6,27 @@ set -x RUSTUP_HOME "$HDX/apps/rustup"
 set -x GOPATH "$HDX/apps/go"
 set -x SNAP_HOME "/var/lib/snapd"
 
+# TODO 目前这个环境变量在 idea 中不起作用，等 idea 修复之后打开这个选项
+# sbt 缓存目录
+#set -x COURSIER_CACHE "$HDX/apps/coursier/cache"
+
 # system default editor
 set -x VISUAL "nvim"
 set -x EDITOR "$VISUAL"
+
 # path
 set -x PATH "$SNAP_HOME/snap/bin:$HDX/apps/go/bin:$HDX/apps/cargo/bin:$HDX/bin:$PATH"
 
 
-
 #################################################################################################### 
-# normal alias
+# fish alias
 
 alias ee="nvim $HOME/.config/fish/config.fish && source $HOME/.config/fish/config.fish"
+
+
+#################################################################################################### 
+# phoronix test alias
+
 alias pts="phoronix-test-suite"
 alias pts_l="pts list-available-tests"
 alias pts_ll="pts list-available-suites"
