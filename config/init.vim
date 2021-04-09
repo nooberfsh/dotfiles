@@ -3,7 +3,11 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.local/share/nvim/plugged')
 
+" 定义跳转，补全
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" editorconfig, https://editorconfig.org/
+Plug 'editorconfig/editorconfig-vim'
 
 Plug 'Yggdroot/LeaderF'
 Plug 'Yggdroot/LeaderF-marks'
