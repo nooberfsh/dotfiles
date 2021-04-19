@@ -46,6 +46,7 @@ alias grb="git rebase"
 alias gcm="git commit -m"
 alias gcam="git commit -a -m"
 alias gpf="git push --force-with-lease"
+alias gpo="git pull origin"
 alias gf="git fetch"
 # https://stackoverflow.com/questions/3216360/merge-update-and-pull-git-branches-without-using-checkouts
 # alias gsync="git checkout --detach && git fetch origin master:master && git checkout -"
