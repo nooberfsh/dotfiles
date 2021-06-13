@@ -46,6 +46,9 @@ fish="config.fish"
 fish_dir="$HOME/.config/fish"
 create_symlink $fish $fish_dir
 
+cargo="config.toml"
+cargo_dir="$HOME/hdx/apps/cargo"
+create_symlink $cargo $cargo_dir
 
 #####################################################
 
