@@ -5,6 +5,7 @@
 
 [pull]
 	rebase = false
+	ff = only
 
 
 [alias]
