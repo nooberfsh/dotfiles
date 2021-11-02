@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/run/current-system/sw/bin/bash
 
 set -e
 
@@ -42,19 +42,3 @@ gitconfig="config"
 git_dir="$HOME/.config/git"
 create_symlink $gitconfig $git_dir
 
-fish="config.fish"
-fish_dir="$HOME/.config/fish"
-create_symlink $fish $fish_dir
-
-cargo="config.toml"
-cargo_dir="$HOME/hdx/apps/cargo"
-create_symlink $cargo $cargo_dir
-
-#####################################################
-
-pam_env=".pam_environment"
-create_symlink $pam_env
-
-sbtrepo="repositories"
-sbtdir="$HOME/.sbt"
-create_symlink $sbtrepo $sbtdir
