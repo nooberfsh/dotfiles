@@ -1,4 +1,6 @@
-"actionlist: https://github.com/nooberfsh/note/blob/master/clion/IdeaVim.md
+" actionlist: https://github.com/nooberfsh/note/blob/master/clion/IdeaVim.md
+" find action id by enable 'track action ids'
+" https://github.com/JetBrains/ideavim#executing-actions
 
 let mapleader = ";"
 
@@ -120,7 +122,8 @@ nnoremap <leader>gb :action Annotate<cr>
 nnoremap <A-s> :action ShowSettings<cr>
 " break point
 nnoremap <A-b> :action ToggleLineBreakpoint<cr>
-
+" git local history
+nnoremap <A-h> :action Vcs.ShowTabbedFileHistory<cr>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
