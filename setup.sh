@@ -42,3 +42,7 @@ gitconfig="config"
 git_dir="$HOME/.config/git"
 create_symlink $gitconfig $git_dir
 
+fish="config.fish"
+fish_dir="$HOME/.config/fish"
+create_symlink $fish $fish_dir
+
