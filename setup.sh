@@ -46,3 +46,5 @@ fish="config.fish"
 fish_dir="$HOME/.config/fish"
 create_symlink $fish $fish_dir
 
+editorconfig=".editorconfig"
+create_symlink $editorconfig
