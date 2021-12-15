@@ -4,7 +4,6 @@ set -x HDX "$HOME/hdx"
 set -x CARGO_HOME "$HDX/apps/cargo"
 set -x RUSTUP_HOME "$HDX/apps/rustup"
 set -x GOPATH "$HDX/apps/go"
-set -x SNAP_HOME "/var/lib/snapd"
 
 # TODO 目前这个环境变量在 idea 中不起作用，等 idea 修复之后打开这个选项
 # sbt 缓存目录
@@ -15,7 +14,7 @@ set -x VISUAL "nvim"
 set -x EDITOR "$VISUAL"
 
 # path
-set -x PATH "$SNAP_HOME/snap/bin:$HDX/apps/go/bin:$HDX/apps/cargo/bin:$HDX/bin:$PATH:$HOME/.local/share/gem/ruby/2.7.0/bin"
+set -x PATH "$HDX/apps/go/bin:$HDX/apps/cargo/bin:$HDX/bin:$PATH"
 
 
 #################################################################################################### 
