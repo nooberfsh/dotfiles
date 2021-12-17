@@ -50,6 +50,10 @@ cargo="config.toml"
 cargo_dir="$HOME/hdx/apps/cargo"
 create_symlink $cargo $cargo_dir
 
+ghci="ghci.conf"
+ghci_dir="$HOME/.ghc"
+create_symlink $ghci $ghci_dir
+
 #####################################################
 
 pam_env=".pam_environment"
