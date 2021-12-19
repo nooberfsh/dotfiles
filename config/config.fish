@@ -1,8 +1,12 @@
 set fish_greeting
 
 set -x HDX "$HOME/hdx"
+
+# rust
 set -x CARGO_HOME "$HDX/apps/cargo"
 set -x RUSTUP_HOME "$HDX/apps/rustup"
+
+# go
 set -x GOPATH "$HDX/apps/go"
 
 # haskell
