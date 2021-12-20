@@ -54,6 +54,9 @@ ghci="ghci.conf"
 ghci_dir="$HOME/.ghc"
 create_symlink $ghci $ghci_dir
 
+editorconfig=".editorconfig"
+create_symlink $editorconfig
+
 #####################################################
 
 pam_env=".pam_environment"
