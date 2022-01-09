@@ -65,3 +65,9 @@ create_symlink $pam_env
 sbtrepo="repositories"
 sbtdir="$HOME/.sbt"
 create_symlink $sbtrepo $sbtdir
+
+#####################################################
+haskell="haskell"
+haskell_dir="$HOME/hdx/apps"
+create_symlink $haskell $haskell_dir
+

@@ -14,6 +14,8 @@ set -x GHCUP_INSTALL_BASE_PREFIX "$HDX/apps"
 set -x GHCUP_HOME "$HDX/apps/.ghcup"
 set -x CABAL_DIR "$HDX/apps/cabal"
 set -x STACK_ROOT "$HDX/apps/stack"
+# 这个是我自己定义的, 目前放了只 stack templates
+set -x HASKELL_HOME "$HDX/apps/haskell"
 
 # TODO 目前这个环境变量在 idea 中不起作用，等 idea 修复之后打开这个选项
 # sbt 缓存目录
@@ -60,4 +62,11 @@ alias gpo="git pull origin"
 alias gf="git fetch"
 # https://stackoverflow.com/questions/3216360/merge-update-and-pull-git-branches-without-using-checkouts
 alias gfm="git fetch origin master:master"
-set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /home/tom/hdx/apps/.ghcup/bin $PATH # ghcup-env
+
+#################################################################################################### 
+# haskell stack
+
+# stack new project
+function sn
+    stack new $argv[1] "$HASKELL_HOME/templates/default.hsfiles"
+end
