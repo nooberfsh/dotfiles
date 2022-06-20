@@ -24,11 +24,6 @@ create_symlink(){
 
 
 #####################################################
-
-neovim="init.vim"
-neovim_dir="$HOME/.config/nvim"
-create_symlink $neovim $neovim_dir
-
 tmux="tmux.conf"
 tmux_dir="$HOME/.config/tmux"
 create_symlink $tmux $tmux_dir
@@ -36,7 +31,6 @@ create_symlink $tmux $tmux_dir
 ideavimrc="ideavimrc"
 ideavim_dir="$HOME/.config/ideavim"
 create_symlink $ideavimrc $ideavim_dir
-
 
 gitconfig="config"
 git_dir="$HOME/.config/git"
@@ -46,28 +40,9 @@ fish="config.fish"
 fish_dir="$HOME/.config/fish"
 create_symlink $fish $fish_dir
 
-cargo="config.toml"
-cargo_dir="$HOME/hdx/apps/cargo"
-create_symlink $cargo $cargo_dir
-
 ghci="ghci.conf"
 ghci_dir="$HOME/.ghc"
 create_symlink $ghci $ghci_dir
 
 editorconfig=".editorconfig"
 create_symlink $editorconfig
-
-#####################################################
-
-pam_env=".pam_environment"
-create_symlink $pam_env
-
-sbtrepo="repositories"
-sbtdir="$HOME/.sbt"
-create_symlink $sbtrepo $sbtdir
-
-#####################################################
-haskell="haskell"
-haskell_dir="$HOME/hdx/apps"
-create_symlink $haskell $haskell_dir
-
