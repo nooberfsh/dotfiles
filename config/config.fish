@@ -2,16 +2,25 @@ set fish_greeting
 
 set -x HDX "$HOME/hdx"
 
+
 # rust
 set -x CARGO_HOME "$HDX/apps/cargo"
 set -x RUSTUP_HOME "$HDX/apps/rustup"
+
+
+# haskell
+set -x GHCUP_INSTALL_BASE_PREFIX "$HDX/apps"
+# this is not a offical env
+set -x GHCUP_HOME "$GHCUP_INSTALL_BASE_PREFIX/.ghcup"
+set -x STACK_ROOT "$HDX/apps/stack"
+
 
 # system default editor
 set -x VISUAL "nvim"
 set -x EDITOR "$VISUAL"
 
 # path
-set -x PATH "$CARGO_HOME/bin:$HDX/bin:$PATH"
+set -x PATH "$GHCUP_HOME/bin:$CARGO_HOME/bin:$HDX/bin:$PATH"
 
 
 #################################################################################################### 
