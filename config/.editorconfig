@@ -39,7 +39,7 @@ indent_size = 2
 # 2 space indentation
 [*.hs]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 [*.cabal]
 indent_style = space

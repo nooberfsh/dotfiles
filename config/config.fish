@@ -20,7 +20,7 @@ set -x VISUAL "nvim"
 set -x EDITOR "$VISUAL"
 
 # path
-set -x PATH "$GHCUP_HOME/bin:$CARGO_HOME/bin:$HDX/bin:$PATH"
+set -x PATH "$HOME/.local/bin:$GHCUP_HOME/bin:$CARGO_HOME/bin:$HDX/bin:$PATH"
 
 
 #################################################################################################### 
