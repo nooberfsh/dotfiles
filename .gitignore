@@ -2,3 +2,5 @@ target
 *.swp
 *.swa
 .idea
+
+/config/nushell/history.txt
