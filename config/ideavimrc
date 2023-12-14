@@ -133,5 +133,5 @@ vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 
-nnoremap <C-o> :action Back<cr>
-nnoremap <C-i> :action Forward<cr>
+"nnoremap <C-o> :action Back<cr>
+"nnoremap <C-i> :action Forward<cr>
