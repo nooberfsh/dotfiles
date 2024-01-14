@@ -99,3 +99,27 @@ $env.NU_PLUGIN_DIRS = [
 
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
 # $env.PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
+
+# base
+$env.HDX = $env.HOME + "/hdx"
+
+# rust
+$env.CARGO_HOME = $env.HDX + "/apps/cargo"
+$env.RUSTUP_HOME = $env.HDX + "/apps/rustup"
+
+# haskell
+$env.GHCUP_INSTALL_BASE_PREFIX = $env.HDX + "/apps"
+# this is not an official env
+$env.GHCUP_HOME = $env.GHCUP_INSTALL_BASE_PREFIX + "/.ghcup"
+$env.STACK_ROOT = $env.HDX + "/apps/stack"
+
+# system default editor
+$env.EDITOR = "nvim"
+$env.VISUAL = "nvim"
+
+$env.PATH = [
+    ($env.GHCUP_HOME + "/bin"),
+    ($env.CARGO_HOME + "/bin"),
+    ($env.HDX + "/bin"),
+    ($env.HOME + "/.local/share/JetBrains/Toolbox/scripts"),
+    ] ++ ($env.PATH | split row (char esep))

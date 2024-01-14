@@ -36,9 +36,6 @@ gitconfig="config"
 git_dir="$HOME/.config/git"
 create_symlink $gitconfig $git_dir
 
-fish="config.fish"
-fish_dir="$HOME/.config/fish"
-create_symlink $fish $fish_dir
 
 ghci="ghci.conf"
 ghci_dir="$HOME/.ghc"
@@ -46,3 +43,6 @@ create_symlink $ghci $ghci_dir
 
 editorconfig=".editorconfig"
 create_symlink $editorconfig
+
+
+ln -s "$ROOT/config/nushell" "$HOME/.config/nushell"
