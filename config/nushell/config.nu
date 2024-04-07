@@ -763,3 +763,11 @@ $env.config = {
 
 
 alias ll = ls -l
+
+# 根据名字找到对应的进程
+def psf [
+  name: string # 进程名
+] {
+  ps | where name =~ $name
+}
+
