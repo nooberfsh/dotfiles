@@ -8,6 +8,8 @@
 # vlan400, 400, 10.1.4.1/24
 
 :local mybridge "mybridge"
+:local mymtu 9000
+:local myl2mtu 9900
 
 /interface/ethernet/switch
 set 0 l3-hw-offloading=no
@@ -45,7 +47,7 @@ add frame-types=admit-only-vlan-tagged name=$mybridge vlan-filtering=yes
         # 设置 mtu, l2mtu
         /interface ethernet
         :put ("set mtu interface=$($inname)")
-        set [find name~$inname] mtu=9000 l2mtu=9900
+        set [find name~$inname] mtu=$mymtu l2mtu=$myl2mtu
     }
     :put "create bridge vlan"
     /interface bridge vlan
@@ -53,7 +55,7 @@ add frame-types=admit-only-vlan-tagged name=$mybridge vlan-filtering=yes
 
     :put "create interface vlan"
     /interface vlan
-    add interface=$mybridge name=$vname vlan-id=$vlanid
+    add interface=$mybridge name=$vname vlan-id=$vlanid mtu=$mymtu
 
     :put "assign ip to vlan"
     /ip/address
