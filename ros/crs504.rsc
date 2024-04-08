@@ -32,6 +32,13 @@ remove [find network~"10.1"]
 add frame-types=admit-only-vlan-tagged name=$mybridge vlan-filtering=yes
 
 
+# 设置 mtu, l2mtu
+/interface ethernet
+:foreach x in=[find name~"qsfp28"] do={
+    set $x mtu=$mymtu l2mtu=$myl2mtu
+}
+
+
 # 给 bridge 创建 4 个 vlan
 :foreach i in={1;2;3;4} do={
     :local vlanid ($i * 100)
@@ -43,11 +50,6 @@ add frame-types=admit-only-vlan-tagged name=$mybridge vlan-filtering=yes
         :put ("add bridge port interface=$($inname) pvid=$($vlanid)")
         /interface bridge port
         add bridge=$mybridge frame-types=admit-only-untagged-and-priority-tagged interface=$inname pvid=$vlanid
-
-        # 设置 mtu, l2mtu
-        /interface ethernet
-        :put ("set mtu interface=$($inname)")
-        set [find name~$inname] mtu=$mymtu l2mtu=$myl2mtu
     }
     :put "create bridge vlan"
     /interface bridge vlan
