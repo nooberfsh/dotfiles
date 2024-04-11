@@ -14,7 +14,7 @@
 /interface/ethernet/switch
 set 0 l3-hw-offloading=no
 
-# 清楚所有 vlan 设置
+# 清除所有 vlan 设置
 /interface bridge
 remove [find]
 /interface bridge port
@@ -26,7 +26,11 @@ remove [find]
 /ip/address
 remove [find network~"10.1"]
 /ip firewall filter
+remove [find where action!=passthrough]
+/interface list member
 remove [find]
+/interface list
+remove [find name=MGMT]
 
 # 创建 bridge
 /interface bridge

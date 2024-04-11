@@ -14,7 +14,7 @@
 /interface/ethernet/switch
 set 0 l3-hw-offloading=no
 
-# 清楚所有 vlan 设置
+# 清除所有 vlan 设置
 /interface bridge
 remove [find]
 /interface bridge port
@@ -26,7 +26,11 @@ remove [find]
 /ip/address
 remove [find network~"10.1"]
 /ip firewall filter
+remove [find where action!=passthrough]
+/interface list member
 remove [find]
+/interface list
+remove [find name=MGMT]
 
 
 # 创建 bridge
@@ -47,7 +51,18 @@ add frame-types=admit-only-vlan-tagged name=$mybridge vlan-filtering=yes
     set $x l3-hw-offloading=no
 }
 
+# 设置第一组接口为管理接口
+/interface list
+add name=MGMT
+/interface list member
+:foreach i in={1;2;3;4} do={
+    add interface="qsfp28-1-$($i)" list=MGMT
+}
+add interface="ether1" list=MGMT
+
+
 /ip firewall filter
+add chain=input action=drop in-interface-list=!MGMT comment="只有管理接口才能访问这个设备"
 add chain=input connection-state=invalid action=drop comment="Drop Invalid connections"
 add action=fasttrack-connection chain=forward connection-state=established,related hw-offload=yes
 add action=accept chain=forward connection-state=established,related
