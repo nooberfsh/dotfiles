@@ -28,6 +28,7 @@ remove [find network~"10.1"]
 /ip firewall filter
 remove [find]
 
+
 # 创建 bridge
 /interface bridge
 :put "create bridge: $($mybridge)"
@@ -40,11 +41,16 @@ add frame-types=admit-only-vlan-tagged name=$mybridge vlan-filtering=yes
     set $x mtu=$mymtu l2mtu=$myl2mtu
 }
 
-# 每个端口开启 L3-HW-OFFLOADING
+# 每个端口关闭 L3-HW-OFFLOADING, 所有的包先经过 firewall，通过 fasttrack 来卸载
 /interface/ethernet/switch/port
 :foreach x in=[find name~"qsfp28"] do={
-    set $x l3-hw-offloading=yes
+    set $x l3-hw-offloading=no
 }
+
+/ip firewall filter
+add chain=input connection-state=invalid action=drop comment="Drop Invalid connections"
+add action=fasttrack-connection chain=forward connection-state=established,related hw-offload=yes
+add action=accept chain=forward connection-state=established,related
 
 
 # 给 bridge 创建 4 个 vlan
