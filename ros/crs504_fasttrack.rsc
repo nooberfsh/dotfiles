@@ -55,9 +55,7 @@ add frame-types=admit-only-vlan-tagged name=$mybridge vlan-filtering=yes
 /interface list
 add name=MGMT
 /interface list member
-:foreach i in={1;2;3;4} do={
-    add interface="qsfp28-1-$($i)" list=MGMT
-}
+add interface="vlan100" list=MGMT
 add interface="ether1" list=MGMT
 
 
