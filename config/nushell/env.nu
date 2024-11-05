@@ -122,4 +122,5 @@ $env.PATH = [
     ($env.CARGO_HOME + "/bin"),
     ($env.HDX + "/bin"),
     ($env.HOME + "/.local/share/JetBrains/Toolbox/scripts"),
+    ($env.HOME + "/.local/bin"),
     ] ++ ($env.PATH | split row (char esep))
