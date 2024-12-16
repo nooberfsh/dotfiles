@@ -32,6 +32,10 @@ ideavimrc="ideavimrc"
 ideavim_dir="$HOME/.config/ideavim"
 create_symlink $ideavimrc $ideavim_dir
 
+fish="config.fish"
+fish_dir="$HOME/.config/fish"
+create_symlink $fish $fish_dir
+
 gitconfig="config"
 git_dir="$HOME/.config/git"
 create_symlink $gitconfig $git_dir
